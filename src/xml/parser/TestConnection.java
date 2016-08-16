@@ -1,0 +1,25 @@
+package xml.parser;
+
+/**
+ * Created by kayabegum on 8/15/2016.
+ */
+
+import java.io.IOException;
+        import java.sql.SQLException;
+        import java.util.ArrayList;
+        import java.util.List;
+
+public class TestConnection {
+    public static void main(String [] args) throws Exception{
+        ConnectDB connectDB = new ConnectDB();
+        List<String> list = new ArrayList<String>();
+        list = connectDB.readDataBase("Students", "first_name");
+        System.out.println("Data is reading from the Table and displaying to the console");
+        for(String st:list){
+            System.out.println(st);
+        }
+    }
+
+
+
+}
